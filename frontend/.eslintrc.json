@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/jsx-runtime",
+    "plugin:@next/next/recommended",
+    "standard"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "no-relative-import-paths"],
+  "rules": {
+    "semi": [2, "always"],
+    "no-console": "error",
+    "react/boolean-prop-naming": [
+      "error",
+      {
+        "propTypeNames": ["bool", "mutuallyExclusiveTrueProps"],
+        "rule": "^[$]?(is|has)[A-Z]([A-Za-z0-9]?)+"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/function-component-definition": 0,
+    "arrow-body-style": ["error", "as-needed"],
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      { "allowSameFolder": true }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "import/default": "error",
+    "import/namespace": "error",
+    "import/no-unused-modules": ["error", { "unusedExports": true }],
+    "import/no-commonjs": "error",
+    "import/no-nodejs-modules": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "sibling"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
