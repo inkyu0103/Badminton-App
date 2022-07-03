@@ -6,7 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "cd .. && husky install ./frontend",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.tsx": [
+      "yarn lint",
+      "git add"
+    ]
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -26,6 +34,8 @@
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-no-relative-import-paths": "^1.3.4",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "typescript": "4.6.4"
   }
