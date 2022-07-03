@@ -7,7 +7,7 @@
     "airbnb",
     "plugin:react/jsx-runtime",
     "plugin:@next/next/recommended",
-    "standard"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,7 +19,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "no-relative-import-paths"],
   "rules": {
-    "semi": [2, "always"],
+    "import/no-unresolved": "off",
     "no-console": "error",
     "react/boolean-prop-naming": [
       "error",
@@ -35,7 +35,7 @@
     "react/function-component-definition": 0,
     "arrow-body-style": ["error", "as-needed"],
     "no-relative-import-paths/no-relative-import-paths": [
-      "warn",
+      "error",
       { "allowSameFolder": true }
     ],
     "react/jsx-props-no-spreading": "off",
