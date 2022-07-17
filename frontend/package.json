@@ -13,12 +13,12 @@
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=CHROMATIC_TOKEN"
+    "chromatic": "npx chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
   },
   "lint-staged": {
     "*.tsx": [
       "yarn lint",
-      "git add"
+      "git add ."
     ]
   },
   "dependencies": {
