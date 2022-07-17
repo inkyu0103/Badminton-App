@@ -25,6 +25,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "yarn install"
+          command: "cd ./frontend && yarn"
+      - run:
           name: "Javascript Test"
           command: "cd ./frontend && yarn test"
 
